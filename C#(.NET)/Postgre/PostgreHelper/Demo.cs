@@ -10,6 +10,13 @@ using MyCement.Utils;
 
 namespace Ajeelee.LBC.Postgre
 {
+    /*
+     * 注意：
+     * 1.查询语句中表名、字段名需用中括号[ ] 封起来，在操作类中会统一替换为双引号。
+     * 2.命令语句中的参数名格式为：@或？+ 参数名，在操作类中为统一替换为冒号。
+     * 3.对于二进制流、日期等特殊类型需采用2中的参数形式
+     * 4.经多次测试postgreSQL数据库只直接支持（冒号+参数名）的参数方式
+     * */
     public partial class Demo : Page
     {
         protected override void OnLoad(EventArgs e)
